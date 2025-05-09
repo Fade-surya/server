@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Trades</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Minecraft Trades</h1>
+        <nav>
+            <ul>
+                <li><a href="#trade">Trade Offer</a></li>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="trade" class="page">
+            <h2>Current Trade</h2>
+            <p>Get a <strong>Nethrite Sword</strong> for just <strong>1 Nethrite Ingot</strong>.</p>
+            <button onclick="switchPage('help')">How does it work?</button>
+        </section>
+
+        <section id="help" class="page hidden">
+            <h2>How it works</h2>
+            <p>Once you place an order, I will contact you with the details of the trade.</p>
+            <button onclick="switchPage('trade')">Back to Trade</button>
+            <button onclick="switchPage('contact')">Place an Order</button>
+        </section>
+
+        <section id="contact" class="page hidden">
+            <h2>Place an Order</h2>
+            <p>Send an order request to my email.</p>
+            <form action="mailto:assooryamsu80@gmail.com" method="get">
+                <label for="username">Your Minecraft Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="message">Message (Optional):</label>
+                <textarea id="message" name="message"></textarea>
+                <br>
+                <button type="submit">Send Order</button>
+            </form>
+            <button onclick="switchPage('help')">Back to Help</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minecraft Trades. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
